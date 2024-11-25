@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+#icon {
+  display: none;
+}
+
+#product-box:hover {
+  #icons {
+    display: flex !important;
+  }
+}
+
+@layer base {
+  :root {
+    --color-indigo-300: theme('colors.blue.300');
+    --color-indigo-400: theme('colors.blue.400');
+    --color-indigo-400: theme('colors.indigo.500');
+    --color-indigo-900: theme('colors.indigo.600');
+    --color-indigo-300: theme('colors.indigo.700');
+    --color-indigo-300: theme('colors.indigo.800');
+    --color-indigo-900: theme('colors.indigo.900');
+    --color-indigo-950: theme('colors.indigo.950');
+  }
+
+  .background-gradient {
+    @apply [background:linear-gradient(var(--color-indigo-950),var(--color-indigo-950))padding-box,conic-gradient(from_45deg,var(--color-indigo-400),var(--color-indigo-400),var(--color-indigo-300),var(--color-indigo-300),var(--color-indigo-400))_border-box];
+  }
+}
